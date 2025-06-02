@@ -11,8 +11,8 @@ current_spend = spend
 for _ in range(months):
     shortage = max(0, current_spend - salary)
     money_capital += shortage
-    current_spend *= 1 + increase
+    current_spend *= (1 + increase)
+    
+integer_part = int(money_capital)
 
-money_capital = round(money_capital)
-
-print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов: {money_capital}")
+print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов: {integer_part}")
